@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #f7d794, #e77f67);
+            color: #3e2723;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #hero {
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            width: 60%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        .profile-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .profile-img, .profile-details {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            transition: transform 0.6s;
+            border-radius: 50%;
+        }
+        .profile-img {
+            object-fit: cover;
+            border: 5px solid #d35400;
+        }
+        .profile-details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #d35400;
+            color: white;
+            font-size: 14px;
+            padding: 10px;
+            transform: rotateY(180deg);
+        }
+        .profile-container:hover .profile-img {
+            transform: rotateY(180deg);
+        }
+        .profile-container:hover .profile-details {
+            transform: rotateY(0);
+        }
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            justify-content: center;
+        }
+        .certification {
+            padding: 10px;
+            background: #d35400;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+        }
+        .certification img {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .certification:hover img {
+            display: block;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background: #e67e22;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        a:hover {
+            background: #cf6a1d;
+        }
+    </style>
+</head>
+<body>
+   <section id="fun-fact" class="container">
+        <h2>🤖 Fun Cybersecurity Fact</h2>
+        <p>Did you know? In 1999, a teenager hacked NASA and the Pentagon, causing a 21-day shutdown of NASA systems! 🚀💻</p>
+    </section>
+    <section id="hero">
+        <div class="container">
+            <div class="profile-container">
+                <img src="Photo2.jpg" alt="Your Photo" class="profile-img">
+                <div class="profile-details">
+                    👋 Hey, I'm Surya!<br>
+                    🎂 26 years old<br>
+                    📍 Chennai, India
+                </div>
+            </div>
+            <h2>Surya Pushparaj</span></h2>
+            <p>🔍 Information Security Professional |✔️ Governance, Risk and Compliance</p>
+        </div>
+    </section>
+        <section id="about" class="container flip-container">
+        <div class="flipper">
+            <div class="front">
+                <h2>About Me</h2>
+                <p>🔐 InfoSec professional with experience in Governance, risk management, and compliance.</p>
+                <p>🛡️ Passionate about protecting digital assets and ensuring security best practices.</p>
+                <p>📊 Strong knowledge in IT governance, vulnerability management, and incident response.</p>
+                <p>📜 Experienced in working with industry frameworks like ISO 27001, SOX, and PCI DSS.</p>
+         
+                <p>🏸 Enjoy staying active but not too intensely.</p>
+                <p>🎮 Passionate about gaming and tech gadgets.</p>
+                <p>🎬 Love watching movies and TV Shows across different genres.</p>
+            </div>
+    </section>
+    
+    <section id="resume" class="container resume-download">
+        <h2>📄 Résumé</h2>
+        <a href="Surya Resume.pdf" download>⬇️ Download My Resume</a>
+    </section>
+    
+    <section id="certifications" class="container">
+        <h2>🏆 Certifications</h2>
+        <div class="certifications-grid">
+            <div class="certification">Certified in Cybersecurity by ISC2
+                <img src="CC.jpg" alt="Certification 1 Image">
+            </div>
+            <div class="certification">ISO/IEC 27001 INFORMATION
+ SECURITY ASSOCIATE™
+                <img src="ISO.jpg" alt="Certification 2 Image">
+            </div>
+            <div class="certification">Six Sigma Yellow Belt
+                <img src="6sigma.jpg" alt="Certification 3 Image">
+            </div>
+            <div class="certification">ISO 9001 QUALITY MANAGEMENT
+ SYSTEMS ASSOCIATE™
+                <img src="QMS.jpg" alt="Certification 4 Image">
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="container">
+        <h2>📩 Contact</h2>
+        <p>📧 Email: surya.pushparaj@hotmail.com</p>
+        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/surya-pushparaj/" target="_blank">Surya Pushparaj</a></p>
+    </section>
+</body>
+</html>
